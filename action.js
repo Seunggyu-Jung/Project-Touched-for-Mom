@@ -1,15 +1,16 @@
 const dog = document.querySelector(".top-dog");
 const talk = document.querySelector(".speak");
 const clickedDog = document.querySelector(".top-dog.clicked");
-const image = document.querySelector(".img");
+const image = document.querySelector(".daniel1");
+const daniel = document.querySelector(".daniel2");
 const image2 = document.querySelector(".img2");
+const dasom = document.querySelector(".dasom");
 const image3 = document.querySelector(".img3");
 const text = document.querySelector(".img-msg");
 const text2 = document.querySelector(".img-msg2");
 const text3 = document.querySelector(".img-msg3");
 const btnClose = document.querySelector(".btn-close");
 const btnClose2 = document.querySelector(".btn-close2");
-const btnClose3 = document.querySelector(".btn-close3");
 const dim = document.querySelector(".dim");
 
 
@@ -34,36 +35,31 @@ function openpopup2(){
     text2.classList.add("active");
 }
 
-function openpopup3(){
-    image3.classList.add("clicked");
-    text3.classList.add("active");
-}
+
 
 
 
 function closepopup(){
     text.classList.remove("active");
-    image.classList.remove("clicked");
+    image.classList.add("grow");
+    daniel.classList.add("active");
 }
 
 function closepopup2(){
     text2.classList.remove("active");
-    image2.classList.remove("clicked");
+    image2.classList.add("grow");
+    dasom.classList.add("active");
 }
 
-function closepopup3(){
-    text3.classList.remove("active");
-    image3.classList.remove("clicked");
-}
+
 
 
 dog.addEventListener("click", dogSpeak);
 image.addEventListener("click", openpopup);
 image2.addEventListener("click", openpopup2);
-image3.addEventListener("click", openpopup3);
 btnClose.addEventListener("click", closepopup);
 btnClose2.addEventListener("click", closepopup2);
-btnClose3.addEventListener("click", closepopup3);
+
 
 
 
@@ -93,7 +89,7 @@ let mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+  if (document.body.scrollTop > 4000 || document.documentElement.scrollTop > 4000) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";

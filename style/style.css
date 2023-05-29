@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KCCMurukmuruk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCMurukmuruk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 h1,
 h2,
 h3,
@@ -37,6 +57,7 @@ body {
     flex-grow: 1;
     position: relative;
     background-color: #ffff;
+    font-family: 'KOTRAHOPE';
 }
 
 .speak {
@@ -67,6 +88,7 @@ body {
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
+    font-family: 'KOTRAHOPE';
 }
 
 
@@ -84,23 +106,43 @@ header {
 
 .title {
     border-radius: 10px;
-    font-size: 36px;
+    font-size: 50px;
     padding: 10px;
-    background-color: aliceblue;
+    font-family: 'KOTRAHOPE';
 
 }
 
 .guide-line {
+    margin-top: 100px;
+    padding: 10px;
     text-align: left;
     border-radius: 10px;
     font-size: 16px;
     background-color: #FFC0CB;
+    
 }
+
+ol {
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    margin: 5px 20px;
+    box-sizing: content-box;
+}
+
+ol li {
+    font-family: 'BookkMyungjo-Bd';
+    
+    padding: 10px;
+}
+
 
 .guide-line p {
     margin-left: 20px;
     font-size: 28px;
+    font-family: 'BookkMyungjo-Bd';
 }
+
+
 
 .art1,
 .art2,
@@ -114,6 +156,7 @@ header {
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'BookkMyungjo-Bd';
 
     position: relative;
 }
@@ -159,6 +202,35 @@ header {
     padding: 15px;
 }
 
+.daniel1 {
+    width: 60%;
+    height: 60%;
+}
+
+.daniel2 {
+    display: none;
+    width: 40%;
+    height: 40%;
+}
+
+.img2 {
+    width: 40%;
+    height: 40%;
+}
+
+.dasom {
+    display: none;
+    width: 40%;
+    height: 40%;
+}
+
+.daniel2.active {
+    display: block;
+}
+
+.dasom.active{
+    display: block;
+}
 
 img:hover {
     transform: scale(1.1);
@@ -167,42 +239,56 @@ img:hover {
 
 
 
-.img.clicked,
+.daniel1.clicked,
 .img2.clicked,
 .img3.clicked{
     transform: rotateY(180deg);
     transition: 1s;
 }
 
+.daniel1.clicked.grow {
+    display: none;
+}
+
+.img2.clicked.grow{
+    display: none;
+}
+
+
 
 
 .img-msg,
-.img-msg2,
-.img-msg3 {
+.img-msg2 {
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
-    background-color: salmon;
+    background-color: #FFC0CB;
 
 
     position: absolute;
     top: 30%;
+    left: 0;
     right: 0;
     z-index: 100;
 
     display: none;
 }
 
+.img-msg p,
+.img-msg2 p {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 
 .img-msg.active,
-.img-msg2.active,
-.img-msg3.active {
+.img-msg2.active {
     display: block;
 }
 
 .img-msg.active + .dim,
-.img-msg2.active + .dim,
-.img-msg3.active + .dim {
+.img-msg2.active + .dim {
     display: block;
     z-index: 99;
 }
@@ -221,10 +307,12 @@ img:hover {
 
 
 .gallery {
+    margin-top: 50px;
     padding: 10px;
-    border: 1px solid black;
     border-radius: 10px;
-    
+    background: url(../img/galleryBackground.jpg) no-repeat center center / cover;
+    font-family: 'KCCMurukmuruk';
+    color:  #333333;
 }
 
 .gallery h2 {
@@ -239,72 +327,116 @@ img:hover {
         "a a  b b "
         " a a  b b "
         " c c  d d "
-        " c c  d d ";
+        " c c  d d "
+        " f f  e e "
+        " f f  e e "
+        " g g  h h "
+        " g g  h h "
+        " j j  i i "
+        " j j  i i ";
         gap : 10px 20px;
     justify-items: center;
     align-items: center;
     
+    
 
     }
 
-
-.a1 {
-    
-    width: 90%;
-    height: 90%;
+.a1,
+.b2,
+.c3,
+.d4,
+.e5,
+.f6,
+.g7,
+.h8,
+.i9,
+.j10 {
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    grid-area: a;
-    position: relative;
-
-    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
+.a1 {
+    grid-area: a;
+    position: relative;
+}
 
 .b2 {
-    
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
+    border: 0;
     grid-area: b;
 }
 
 .c3 {
-    
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
     grid-area: c;
 }
 
 .d4 {
-    
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
     grid-area: d;
 }
 
+.e5 {
+    grid-area: f;
+}
+
+.f6{
+    border: 0;
+    grid-area: e;
+}
+
+.g7 {
+    
+    grid-area: g;
+}
+
+.h8 {
+    grid-area: h;
+}
+
+.i9 {
+    grid-area: j;
+}
+
+.j10 {
+    grid-area: i;
+}
+
+.finish {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+}
 
 #myBtn {
     display: none; 
     position: fixed; 
-    bottom: 10px; 
-    right: 10px; 
+    bottom: 20px; 
+    right: 20px; 
     z-index: 99; 
     border: none; 
     outline: none; 
-    background-color: aqua; 
+    background-color: burlywood; 
     color: black; 
     cursor: pointer; 
-    padding: 15px; 
+    padding: 5px; 
     border-radius: 10px; 
-    font-size: 12px; 
+    font-size: 24px;
+    font-family: 'KOTRAHOPE';
   }
   
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+
 
 @media (max-width: 720px) {
     .art1,
