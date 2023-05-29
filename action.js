@@ -89,7 +89,7 @@ let mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 4000 || document.documentElement.scrollTop > 4000) {
+  if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
